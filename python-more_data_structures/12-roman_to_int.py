@@ -3,7 +3,7 @@ def roman_to_int(roman_string):
     dic = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     res = 0
     i = 0
-    if not roman_string or roman_string[0] not in dic:
+    if not roman_string or not isinstance(roman_string, str):
         return res
     elif len(roman_string) == 1 and roman_string[0] in dic:
         res = dic[roman_string[0]]
