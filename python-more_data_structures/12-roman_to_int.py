@@ -20,6 +20,6 @@ def roman_to_int(roman_string):
             if i == len(roman_string)-1:
                 res += dic[rom[i]]
             else:
-                break
+                return 0
         i += 1
     return res
