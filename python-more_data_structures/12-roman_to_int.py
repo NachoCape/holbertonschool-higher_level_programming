@@ -13,13 +13,14 @@ def roman_to_int(roman_string):
         if i < len(roman_string)-1 and rom[i + 1] in dic:
             if dic[rom[i]] >= dic[rom[i+1]]:
                 res += dic[rom[i]]
+                i += 1
             else:
                 res += dic[rom[i+1]] - dic[rom[i]]
                 i += 2
         else:
             if i == len(roman_string)-1:
                 res += dic[rom[i]]
+                i += 1
             else:
                 return 0
-        i += 1
     return res
