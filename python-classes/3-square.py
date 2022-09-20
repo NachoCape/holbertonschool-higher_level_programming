@@ -2,9 +2,6 @@
 """Write a class Square that defines a square"""
 
 
-from ctypes import sizeof
-
-
 class Square:
     """class Square"""
     def __init__(self, size=0):
