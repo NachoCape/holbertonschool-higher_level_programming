@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Divide a matrix module"""
+
+
 def matrix_divided(matrix, div):
+    """Write a function that divides all elements of a matrix"""
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
