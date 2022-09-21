@@ -6,6 +6,6 @@ def say_my_name(first_name, last_name=""):
     """Write a function that prints My name is <first name> <last name>"""
     if not first_name or not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
-    if not last_name or not isinstance(last_name, str):
+    if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
     print(f"My name is {first_name} {last_name}")
