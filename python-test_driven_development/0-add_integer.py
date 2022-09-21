@@ -10,12 +10,8 @@
 
 def add_integer(a, b=98):
     """add 2 integers"""
-    if a is not None and (isinstance(a, int) or isinstance(a, float)):
-        a = round(a)
-    else:
+    if a is None or (type(a) is not int and type(a) is not float):
         raise TypeError("a must be an integer")
-    if b is not None and (isinstance(b, int) or isinstance(b, float)):
-        b = round(b)
-    else:
+    if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
-    return a + b
+    return int(a) + int(b)
