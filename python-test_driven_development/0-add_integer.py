@@ -8,15 +8,10 @@
         """
 
 
-def add_integer(a, b=0):
+def add_integer(a, b=98):
     """ Doc """
     if a is None or (type(a) is not int and type(a) is not float):
         raise TypeError("a must be an integer")
-    if type(b) is not int and type(b) is not float:
+    if b is None or (type(b) is not int and type(b) is not float):
         raise TypeError("b must be an integer")
-    return int(a) + int(b)
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    return int(a + b)
