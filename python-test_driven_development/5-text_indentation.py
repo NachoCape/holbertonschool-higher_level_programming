@@ -8,14 +8,20 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     bool = False
-    for i in range(0, len(text)):
+    i = 0
+    while i < len(text):
         if bool:
             bool = False
             continue
         if text[i] == "." or text[i] == ":" or text[i] == "?":
             print(f"{text[i]}")
             print("")
-            if text[i] != text[-1] and text[i+1] == " ":
-                bool = True
+            j = i + 1
+            count = 0
+            while j < len(text) and text[j] == " ":
+                count += 1
+                j += 1
+            i += count
         else:
             print(f"{text[i]}", end="")
+        i += 1
