@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """String representation Module"""
+
+
 class Rectangle:
     """Write a class Rectangle that defines a rectangle"""
     def __init__(self, width=0, height=0):
