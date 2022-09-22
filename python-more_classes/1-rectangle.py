@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Real definition of a rectangle Module"""
+"""Real definition of a rectangle module"""
 
 
 class Rectangle:
