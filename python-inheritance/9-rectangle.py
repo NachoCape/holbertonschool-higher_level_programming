@@ -2,9 +2,6 @@
 """Rectangle Module"""
 
 
-from turtle import width
-
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
