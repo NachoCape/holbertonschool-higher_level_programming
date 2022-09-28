@@ -19,4 +19,3 @@ except Exception:
     for i in range(1, len(sys.argv)):
         list.append(sys.argv[i])
     save_to_json_file(list, filename)
-
