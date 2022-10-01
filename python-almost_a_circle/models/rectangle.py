@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Rectangle Module"""
+from turtle import width
 from .base import Base
 
 
@@ -63,3 +64,9 @@ class Rectangle(Base):
     def area(self):
         """Return the area of a Rectangle"""
         return self.__width * self.__height
+
+    def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                [print("#", end="") if j < self.__width-1 else print("#")]
