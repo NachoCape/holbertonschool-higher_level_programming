@@ -70,3 +70,8 @@ class Rectangle(Base):
         for i in range(self.__height):
             for j in range(self.__width):
                 [print("#", end="") if j < self.__width-1 else print("#")]
+
+    def __str__(self):
+        """prints the rectangle with his different attributes"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}"
