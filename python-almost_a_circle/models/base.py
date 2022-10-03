@@ -2,6 +2,7 @@
 """Class Base Module"""
 
 import json
+from venv import create
 
 
 class Base:
@@ -50,3 +51,17 @@ class Base:
             dummy = cls(1, 2)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        try:
+            list = []
+            with open(filename,"r", encoding="utf-8") as f:
+                a = cls.from_json_string(f.read())
+            for i in a:
+                list.append(cls.create(**i))
+            return list
+        except Exception:
+            return []
