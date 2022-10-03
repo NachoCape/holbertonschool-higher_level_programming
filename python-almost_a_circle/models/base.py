@@ -58,7 +58,7 @@ class Base:
         filename = cls.__name__ + ".json"
         try:
             list = []
-            with open(filename,"r", encoding="utf-8") as f:
+            with open(filename, "r", encoding="utf-8") as f:
                 a = cls.from_json_string(f.read())
             for i in a:
                 list.append(cls.create(**i))
