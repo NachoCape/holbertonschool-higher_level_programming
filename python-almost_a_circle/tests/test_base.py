@@ -12,7 +12,7 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(b.id, 5)
 
     def test_json_to_string(self):
-        r = Rectangle(1,2,3,4)
+        r = Rectangle(1, 2, 3, 4)
         dictionary = r.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
         self.assertTrue(type(json_dictionary), str)
@@ -20,28 +20,26 @@ class Test_Base(unittest.TestCase):
     def test_save_to_file_rectangle(self):
         Rectangle.save_to_file(None)
         Rectangle.save_to_file([])
-        Rectangle.save_to_file([Rectangle(1,2,3,4), Rectangle(1,2)])
+        Rectangle.save_to_file([Rectangle(1, 2, 3, 4), Rectangle(1, 2)])
 
     def test_save_to_file_square(self):
         Square.save_to_file(None)
         Square.save_to_file([])
-        Square.save_to_file([Square(1,2,3,4), Rectangle(1,2)])
+        Square.save_to_file([Square(1, 2, 3, 4), Rectangle(1, 2)])
 
     def test_from_json_string_rectangle(self):
-        Rectangle.from_json_string(None)
-        Rectangle.from_json_string([])
-        Rectangle.from_json_string([{'id': 89}])
+        list = Rectangle.to_json_string([{'id': 89, 'width': 10}])
+        dict = Rectangle.from_json_string(list)
 
     def test_from_json_string_Square(self):
-        Rectangle.from_json_string(None)
-        Rectangle.from_json_string([])
-        Rectangle.from_json_string([{'id': 89}])
+        list = Square.to_json_string([{'id': 89, 'width': 10}])
+        dict = Square.from_json_string(list)
 
     def test_create_rectangle(self):
-        Rectangle.create(**{'width':2, 'height':3})
+        Rectangle.create(**{'width': 2, 'height': 3})
 
     def test_create_square(self):
-        Square.create(**{'width':2, 'height':3})
+        Square.create(**{'width': 2, 'height': 3})
 
     def test_load_from_file_rectangle(self):
         Rectangle.load_from_file()
