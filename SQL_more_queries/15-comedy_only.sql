@@ -4,5 +4,5 @@
 -- Results must be sorted in ascending order by the show title
 -- You can use only one SELECT statement
 
-SELECT tv_shows.title FROM tv_shows, tv_genres RIGHT JOIN tv_show_genres ON tv_show_genres.genre_id=tv_genres.id WHERE tv_genres.name='Co
+SELECT tv_shows.title FROM tv_shows, tv_genres LEFT JOIN tv_show_genres ON tv_show_genres.genre_id=tv_genres.id WHERE tv_genres.name='Co
 medy' AND tv_shows.id=tv_show_genres.show_id GROUP by tv_shows.title ORDER BY tv_shows.title ASC;
