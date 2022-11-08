@@ -16,10 +16,10 @@ if __name__ == "__main__":
     db = connect(host="localhost", port=3306, user=_user,
                  password=_pass, db=_db)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states WHERE states.name='{}'\
+            ORDER BY states.id ASC".format(_name_state))
     rows = cur.fetchall()
     for row in rows:
-        if row[1] == _name_state:
-            print(row)
+        print(row)
     cur.close()
     db.close()
