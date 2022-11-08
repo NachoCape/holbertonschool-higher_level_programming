@@ -16,7 +16,7 @@ if __name__ == "__main__":
     db = connect(host="localhost", port=3306, user=_user,
                  password=_pass, db=_db)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE statesname='{}'\
+    cur.execute("SELECT * FROM states WHERE states.name='{}'\
             ORDER BY states.id ASC".format(_name_state))
     rows = cur.fetchall()
     for row in rows:
