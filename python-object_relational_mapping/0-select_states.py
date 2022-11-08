@@ -13,12 +13,12 @@ import sys
 
 
 if __name__ == "__main__":
-    arg1 = sys.argv[1]
-    arg2 = sys.argv[2]
-    arg3 = sys.argv[3]
+    _user = sys.argv[1]
+    _pass = sys.argv[2]
+    _db = sys.argv[3]
 
-    db = connect(host="localhost", port=3306, user=arg1,
-                 passwd=arg2, db=arg3)
+    db = connect(host="localhost", port=3306, user=_user,
+                 passwd=_pass, db=_db)
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id")
     rows = cur.fetchall()
