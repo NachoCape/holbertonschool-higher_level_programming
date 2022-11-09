@@ -21,8 +21,9 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     for index, row in enumerate(rows):
         if index == len(rows) - 1:
-            print(f"{row[0]}")
+            print(f"{row[0]}", end="")
         else:
             print(f"{row[0]}, ", end="")
+    print("")
     cur.close()
     db.close()
