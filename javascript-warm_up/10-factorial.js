@@ -12,5 +12,5 @@ function recu (num) {
 if (argv.length === 3) {
   console.log(recu(argv[2]));
 } else {
-  console.log(NaN);
+  console.log(1);
 }
