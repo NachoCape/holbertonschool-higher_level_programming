@@ -2,7 +2,7 @@
 
 import { argv } from 'process';
 
-if (argv.length <= 2) {
+if (argv.length <= 3) {
   console.log(0);
 } else {
   let max = argv[2];
