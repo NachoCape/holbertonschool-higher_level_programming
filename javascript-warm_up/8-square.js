@@ -5,7 +5,7 @@ const argv = process.argv;
 if (argv.length === 2) {
   console.log('Missing size');
 } else if (isNaN(argv[2])) {
-  console.log('');
+  console.log('Missing size');
 } else {
   let str = '';
   for (let i = 0; i < argv[2]; i++) {
