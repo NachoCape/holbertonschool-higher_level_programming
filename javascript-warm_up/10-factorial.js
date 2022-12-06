@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-import { argv } from 'process';
+const argv = process.argv;
 
 function recu (num) {
   if (num > 0) {

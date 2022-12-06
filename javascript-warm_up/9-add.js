@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-import { argv } from 'process';
+const argv = process.argv;
 
 function add (a, b) {
   return a + b;
