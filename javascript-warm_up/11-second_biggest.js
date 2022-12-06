@@ -15,6 +15,8 @@ if (argv.length <= 3) {
   for (let j = 3; argv[j]; j++) {
     if (+argv[j] < +max && +argv[j] > +res) {
       res = +argv[j];
+    } else if (+res === +max && +argv[j] < +res) {
+      res = +argv[j];
     }
   }
   console.log(res);
