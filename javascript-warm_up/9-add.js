@@ -8,4 +8,6 @@ function add (a, b) {
 
 if (argv.length === 4) {
   console.log(add(+argv[2], +argv[3]));
+} else {
+  console.log(NaN);
 }
